@@ -5,20 +5,20 @@
 <div id="page">
   <h1>Welcome!</h1>
   <div class="instructions" id="instructions">
-    <p>INFORMED CONSENT: xxxxxxxxx </p><p>
+    <p>
 
 INSTRUCTIONS:
 In this exercise, you will hear a series of recorded sentences, played one at a time. After each one, your job is to type out as much as you can remember of the sentence.</p><p>
 
 Make sure your volume is turned up before you begin.  If you don't hear the audio after you click 'Begin,' try opening the page in a different web browser. </p><p>
 
-Click on 'Begin' to begin playing a sentence. You will hear it once, and then once more after a five second interval. Try to remember it (but do not take notes!).  Quickly click to go to the next screen and begin typing. (If you don't click within 5 seconds, the next screen will appear automatically.) </p><p>
+Click on 'Begin' to begin playing a sentence. You will hear it ONCE. Try to remember it (but do not take notes!).  Click 'Ready to type' to go to the next screen and begin typing. (If you don't click, the next screen will appear on its own a few seconds after the sound finishes playing) </p><p>
 
-Type as much of the sentence as you can remember; leave gaps where necessary. When you're sure you've done the best you can, you may click 'Next' ONCE to hear the next sentence.</p><p>
+Type as much of the sentence as you can remember; leave gaps where necessary. When you've done the best you can, click 'Next' ONCE to hear the next sentence.  The next sentence will play on its own after 2 minutes if you don't click 'Next.'</p><p>
 
 These sentences are intended to be difficult, and some of them are spoken in a strange way. So don't worry if you miss some words. Nobody performs at 100 percent on this task!  All we ask is that you try to remember as much as possible. If you do, you will get full AMT credit for performing the task regardless of your actual recall score.</p><p>
  
-There are 58 sentences in total. The whole task will take about 45(?)minutes.</p><p>
+There are 58 sentences in total. The whole task will take about 45 minutes.</p><p>
 
 First, please enter your Amazon Mechanical Turk ID. Please make sure it is correct or we will not be able to compensate you:
 </p><p>
@@ -34,11 +34,10 @@ Ready?
 
 </div>
 
-<script src="jquery.2.1.0.js"></script>
+<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
 
 <script>
-
-var prefix = "http://s3.amazonaws.com/center_embedded_sentences/"
+var prefix = "https://s3.amazonaws.com/CE_no_repeats/NR_"
 sources = [ {"audioSource": prefix+"1_Nora_Filler_1_reporter.wav",    "name": "entry.1797156307"}
            ,{"audioSource": prefix+"2_Nora_Filler_2_Peter.wav",       "name": "entry.781356652"}
            ,{"audioSource": prefix+"3_Nora_Filler_3A_Pilot.wav",      "name": "entry.2081559175"}
@@ -126,7 +125,7 @@ setToAudio = function() {
 
   play();
 
-  timer = setTimeout(setToInput, 20000);
+  timer = setTimeout(setToInput, 15000);
   $("#done").on("click", function(){
     clearTimeout(timer);
     setToInput();
